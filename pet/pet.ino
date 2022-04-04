@@ -1,6 +1,11 @@
+#include <Servo.h>
+
+Servo myservo;
+
 
 void setup()
 {
+  myservo.attach(9);
   pinMode(13,OUTPUT);
   pinMode(3,INPUT);
   Serial.begin(9600);
