@@ -5,55 +5,87 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Cyber ROOM</h1>
-    <div class="container-fluid container" style="border-style:groove; margin-top: 50px; margin-bottom: 50px;">
-      <div class="row">
-        <!-- Imagem -->
-        <div class="col-sm-3">
-          <img src="https://icons.iconarchive.com/icons/vexels/office/512/bulb-icon.png" style="max-width: 300px;">
-        </div>
-        <!-- Opções de Comando-->
-        <div class="col-sm-9">
-          <h3>Começa ligado</h3>
-          <input type="radio"></input>
-          <h3>Tempo de Pisca</h3>
+    <div class="headerr">
+      <h1>Cyber ROOM</h1>
+    </div>
+    <div style="margin-top: 100px; padding-left: 100px; display: flex;">
+      <div>
+        <h2>Relizar um donate!</h2>
+        <div style="display:block;">
+          <input type="text"></input>
           <input type="number"></input>
-          <h3>Número de Pisca</h3>
-          <input type="number"></input>
-          <h3>Cor</h3>
-          <input type="color"></input>
-          <h3>Testar</h3>
-          <input type="button"></input>
         </div>
+
+        <button type="button" id="btnDonate">DONATE</button>
       </div>
+      <img src="/img/btc.png" style="max-width: 120px;">
+    </div>
     </div>
 
-    <div class="container-fluid container" style="border-style:groove; margin-top:50px; margin-bottom: 50px;">
+    <div class="container-fluid container" style="margin-top: 50px; margin-bottom: 50px;">
       <div class="row">
         <!-- Imagem -->
-        <div class="col-sm-3">
-        <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/plug.png" style="max-width: 300px;">
+        <div class="col-sm-6">
+          <div class="card" style="width: 18rem; background-color: rgb(70, 70, 70);">
+            <img class="card-img-top" src="/img/Light_bulb_perspective_matte.png" style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 200px;" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Lâmpada</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div>
+                <label for="toggLamp" style="display: block;">Click me</label>
+                <label class="switch">
+                  <input type="checkbox" id="toggBulb">
+                  <span class="slider round"></span>
+                </label>
+                <label for="blinkCBulb" style="display: block;">Blink Count</label>
+                <input type="number" id="blinkCBulb"></input>
+                <label for="blinkTBulb" style="display: block;">Blink Time</label>
+                <input type="number" id="blinkTBulb"></input>
+              </div>
+              <div style="display:inline;">
+                <label for="colorBulb" style="display: block;">Color</label>
+                <input type="color" id="colorBulb"></input>
+              </div>
+            </div>
+          </div>
         </div>
+        
+        <div class="col-sm-6">
+          <div class="card" style="width: 18rem; background-color: rgb(70, 70, 70);">
+            <img class="card-img-top" src="/img/Electric_socket_perspective_matte.png" style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 200px;" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Tomada</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <label for="toggSock" style="display: block;">Click me</label>
+              <label class="switch">
+                <input type="checkbox" id="toggSock">
+                <span class="slider round"></span>
+              </label>
+              <label for="blinkCSock" style="display: block;">Blink Count</label>
+              <input type="number" id="blinkCSock"></input>
+              <label for="blinkTSock" style="display: block;">Blink Time</label>
+              <input type="number" id="blinkTSock"></input>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="btnDonate">ENVIAR</button>
         <!-- Opções de Comando-->
-        <div class="col-sm-9">
-          <h3>Começa ligado</h3>
-          <input type="radio"></input>
-          <h3>Tempo de Pisca</h3>
-          <input type="number"></input>
-          <h3>Número de Pisca</h3>
-          <input type="number"></input>
-          <h3>Cor</h3>
-          <input type="color"></input>
-          <h3>Testar</h3>
-          <input type="button"></input>
-        </div>
       </div>
-    
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
