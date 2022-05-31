@@ -1,7 +1,11 @@
 body {
-  background-image: linear-gradient(rgb(4, 54, 27), rgb(0, 86, 51));
-    font-family: 'Poppins', sans-serif;
-    color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.7)),url('/img/wallpapersden.com_76492-5120x2880.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
 h1 {
@@ -13,7 +17,7 @@ h3 {
 }
 
 .headerr {
-   background: #000000;
+   background: #353535;
    position: fixed;
    top: 0;
    left: 0;
@@ -142,4 +146,45 @@ h3 {
   .coluna {
     max-width: 100%;
     padding: 30px;
+  }
+
+  .buttonn {
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom right, #00feff , #fb4925);
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    padding: 16px;
+    width: 220px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
+  
+  .buttonn{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .buttonn:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .buttonn:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  .buttonn:hover:after {
+    opacity: 1;
+    right: 10px;
   }
