@@ -1,5 +1,5 @@
 body {
-    background-color: #181818;
+  background-image: linear-gradient(rgb(4, 54, 27), rgb(0, 86, 51));
     font-family: 'Poppins', sans-serif;
     color: white;
 }
@@ -13,7 +13,7 @@ h3 {
 }
 
 .headerr {
-   background: #11558a;
+   background: #000000;
    position: fixed;
    top: 0;
    left: 0;
@@ -111,9 +111,9 @@ h3 {
     background: none;
     border: 0;
     cursor: pointer;
-    height: 15em;
+    height: 10em;
     padding: 0;
-    width: 15em;
+    width: 10em;
   }
   
   *:focus{
@@ -137,4 +137,9 @@ h3 {
   
   ::-moz-focus-inner{
     padding: 0;
+  }
+
+  .coluna {
+    max-width: 100%;
+    padding: 30px;
   }

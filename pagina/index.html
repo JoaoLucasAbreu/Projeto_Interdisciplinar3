@@ -15,36 +15,37 @@
   </head>
   <body>
     <div class="headerr">
-      <h1>Cyber ROOM</h1>
+      <h1 style="padding: 20px;">Cyber ROOM</h1>
     </div>
     <div style="margin-top: 100px; padding-left: 100px; display: flex;">
       <div>
         <h2>Relizar um donate!</h2>
         <div style="display:block;">
-          <input type="text"></input>
-          <input type="number"></input>
+          <input type="text" placeholder="Nome"></input>
+          <input type="number" placeholder="Valor em Cripto"></input>
         </div>
-
         <button type="button" id="btnDonate">DONATE</button>
       </div>
       <img src="/img/btc.png" style="max-width: 120px;">
     </div>
     </div>
 
-    <div class="container-fluid container" style="margin-top: 50px; margin-bottom: 50px;">
+    <div class="container-fluid container">
       <div class="row">
         <!-- Imagem -->
-        <div class="col-sm-6">
-          <div class="card" style="width: 18rem; background-color: rgb(70, 70, 70);">
+        <div class="col-sm-6 coluna">
+          <div class="card" style="background-color: rgb(70, 70, 70, 0.7);">
             <img class="card-img-top" src="/img/Light_bulb_perspective_matte.png" style="display: block;
             margin-left: auto;
             margin-right: auto;
+            padding-top: 30px;
             max-width: 200px;" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Lâmpada</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <div>
-                <label for="toggLamp" style="display: block;">Click me</label>
+              <div style="display:inline-block">
+                <label for="toggLamp" style="display: block;">Iniciar Ligado</label>
                 <label class="switch">
                   <input type="checkbox" id="toggBulb">
                   <span class="slider round"></span>
@@ -54,24 +55,26 @@
                 <label for="blinkTBulb" style="display: block;">Blink Time</label>
                 <input type="number" id="blinkTBulb"></input>
               </div>
-              <div style="display:inline;">
+              <div style="display:inline-block; padding-left: 30px;">
                 <label for="colorBulb" style="display: block;">Color</label>
                 <input type="color" id="colorBulb"></input>
+              </div>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="col-sm-6">
-          <div class="card" style="width: 18rem; background-color: rgb(70, 70, 70);">
+        <div class="col-sm-6 coluna">
+          <div class="card" style="background-color: rgb(70, 70, 70, 0.7);">
             <img class="card-img-top" src="/img/Electric_socket_perspective_matte.png" style="display: block;
             margin-left: auto;
             margin-right: auto;
+            padding-top: 30px;
             max-width: 200px;" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Tomada</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <label for="toggSock" style="display: block;">Click me</label>
+              <label for="toggSock" style="display: block;">Iniciar Ligado</label>
               <label class="switch">
                 <input type="checkbox" id="toggSock">
                 <span class="slider round"></span>
@@ -83,8 +86,9 @@
             </div>
           </div>
         </div>
-        <button type="button" id="btnDonate">ENVIAR</button>
-        <!-- Opções de Comando-->
+      </div>
+      <div style="text-align: right;">
+      <button type="button" id="btnDonate" style="text-align:right">ENVIAR</button>
       </div>
     </div>
     <!-- Optional JavaScript -->
