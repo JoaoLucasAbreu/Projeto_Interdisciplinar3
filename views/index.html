@@ -46,9 +46,10 @@
               <div>
               <div style="display:inline-block">
                 <label for="toggLamp" style="display: block;">Ligado</label>
-                <label class="switch">
-                  <input type="checkbox" id="modoL">
-                  <span class="slider round"></span>
+                <select id="modoT">
+                  <option value="0">Desligado</option>
+                  <option value="1">Ligado</option>
+                </select>
                 </label>
                 <label for="blinkCBulb" style="display: block;">Blink Count</label>
                 <input type="number" id="contagem" maxlenght="10"></input>
@@ -78,9 +79,11 @@
               <h5 class="card-title">Tomada</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <label for="toggSock" style="display: block;">Ligado</label>
-              <label class="switch">
-                <input type="checkbox" id="modoT">
-                <span class="slider round"></span>
+              <label >
+                <select id="modoL">
+                  <option value="0">Desligado</option>
+                  <option value="1">Ligado</option>
+                </select>
               </label>
               <div style="text-align: right;">
                 <button type="button" id="btnDonate" class="buttonn" onclick="enviarTomada()">ENVIAR</button>
@@ -112,16 +115,18 @@
         console.log("Exceção: " + (ex.message || ex.toString()));
       }
     }
-    
-    let modoL = document.getElementById("modoL");
-    let tempo = document.getElementById("tempo");
-    let contagem = document.getElementById("contagem");
-    let rgb = document.getElementById("rgb");
 
-    let modoT = document.getElementById("modoT");
+      let modoL=document.getElementById("modoL");
+      let tempo=document.getElementById("tempo");
+      let contagem=document.getElementById("contagem");
+      let rgb=document.getElementById("rgb");
+      let modoT=document.getElementById("modoT");
 
-    function lampadaPower(modo) {
-      enviar("/lampada/Power/" + modo);
+
+
+
+    function lampadaPower(modoL) {
+      enviar("/lampada/Power/" + modoL);
     }
 
     function lampadaBlinkTime(tempo) {
@@ -136,20 +141,24 @@
       enviar("/lampada/Color/" + rgb);
     }
 
-    function tomadaPower(modo) {
-      enviar("/tomada/Power/" + modo);
+    function tomadaPower(modoT) {
+      enviar("/tomada/Power/" + modoT);
     }
    
     function enviarLampada(){
-      lampadaPower(modoL);
-      lampadaBlinkTime(tempo);
-      lampadaBlinkCount(contagem);
-      lampadaColor(rgb);
+     lampadaPower(modoL.value);
+     lampadaColor(rgb.value);
+     lampadaBlinkTime(tempo.value);
+     lampadaBlinkCount(contagem.value);
+     
       
     }
 
     function enviarTomada(){
-      tomadaPower(modo);
+     
+        return tomadaPower(modoT.value);
+      
+
     }
 
     </script>
