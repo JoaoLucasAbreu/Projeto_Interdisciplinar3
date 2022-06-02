@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CYBER ROOM</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/style.css">
+  </head>
+  <body>
+    <div class="headerr">
+      <h1 style="padding: 20px; font-weight: bold;">Cyber ROOM</h1>
+    </div>
+    <div style="margin-top: 100px;margin-bottom: 30px; padding-left: 100px; display: flex;">
+      <div>
+        <h2>Realizar um donate!</h2>
+        <div style="display:block;">
+          <input type="text" placeholder="Nome"></input>
+          <input type="number" placeholder="Valor em Cripto"></input>
+        </div>
+        <button type="button" id="btnDonate">DONATE</button>
+      </div>
+      <img src="/public/img/btc.png" style="max-width: 120px;">
+    </div>
+    </div>
+
+    <div class="container-fluid container">
+      <div class="row">
+        <!-- Imagem -->
+        <div class="col-sm-6 coluna">
+          <div class="card" style="background-color: rgb(70, 70, 70, 0.7);">
+            <img class="card-img-top" src="/public/img/Light_bulb_perspective_matte.png" style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 30px;
+            max-width: 175px;" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Lâmpada</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div>
+              <div style="display:inline-block">
+                <label for="toggLamp" style="display: block;">Iniciar Ligado</label>
+                <label class="switch">
+                  <input type="checkbox" id="toggBulb">
+                  <span class="slider round"></span>
+                </label>
+                <label for="blinkCBulb" style="display: block;">Blink Count</label>
+                <input type="number" id="blinkCBulb" maxlenght="10"></input>
+                <label for="blinkTBulb" style="display: block;" maxlenght="10">Blink Time</label>
+                <input type="number" id="blinkTBulb"></input>
+              </div>
+              <div style="display:inline-block; padding-left: 30px;">
+                <label for="colorBulb" style="display: block;">Color</label>
+                <input type="color" id="colorBulb"></input>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 coluna">
+          <div class="card" style="background-color: rgb(70, 70, 70, 0.7);">
+            <img class="card-img-top" src="/public/img/Electric_socket_perspective_matte.png" style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 30px;
+            max-width: 175px;" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Tomada</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <label for="toggSock" style="display: block;">Iniciar Ligado</label>
+              <label class="switch">
+                <input type="checkbox" id="toggSock">
+                <span class="slider round"></span>
+              </label>
+              <label for="blinkCSock" style="display: block;">Blink Count</label>
+              <input type="number" id="blinkCSock" maxlenght="10"></input>
+              <label for="blinkTSock" style="display: block;">Blink Time</label>
+              <input type="number" id="blinkTSock" maxlenght="10"></input>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: right;">
+      <button type="button" id="btnDonate" class="buttonn">ENVIAR</button>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    async function enviar(url) {
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        if (!response.ok) {
+          console.error("Erro! " + json);
+        } else {
+          console.log("Sucesso!");
+        }
+      } catch (ex) {
+        console.log("Exceção: " + (ex.message || ex.toString()));
+      }
+    }
+
+    function lampadaPower(modo) {
+      enviar("/lampada/Power/" + modo);
+    }
+
+    function lampadaBlinkTime(tempo) {
+      enviar("/lampada/BlinkTime/" + tempo);
+    }
+
+    function lampadaBlinkCount(contagem) {
+      enviar("/lampada/BlinkCount/" + contagem);
+    }
+
+    function lampadaColor(rgb) {
+      enviar("/lampada/Color/" + rgb);
+    }
+
+    function tomadaPower(modo) {
+      enviar("/tomada/Power/" + modo);
+    }
+    </script>
+  </body>
+</html>
