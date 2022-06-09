@@ -121,44 +121,37 @@
       let contagem=document.getElementById("contagem");
       let rgb=document.getElementById("rgb");
       let modoT=document.getElementById("modoT");
-
-
-
+  
 
     function lampadaPower(modoL) {
-      enviar("/lampada/Power/" + modoL);
+      enviar("/lampada/Power/"+modoL);
     }
 
     function lampadaBlinkTime(tempo) {
-      enviar("/lampada/BlinkTime/" + tempo);
+      enviar("/lampada/BlinkTime/"+tempo);
     }
 
     function lampadaBlinkCount(contagem) {
-      enviar("/lampada/BlinkCount/" + contagem);
+      enviar("/lampada/BlinkCount/"+contagem);
     }
 
     function lampadaColor(rgb) {
-      enviar("/lampada/Color/" + rgb);
+      enviar("/lampada/Color/"+rgb);
     }
 
     function tomadaPower(modoT) {
-      enviar("/tomada/Power/" + modoT);
+      enviar("/tomada/Power/"+modoT);
     }
    
     function enviarLampada(){
+      lampadaColor(rgb.value);
+      lampadaBlinkCount(contagem.value);
      lampadaPower(modoL.value);
-     lampadaColor(rgb.value);
-     lampadaBlinkTime(tempo.value);
-     lampadaBlinkCount(contagem.value);
-     
-      
+     lampadaBlinkTime(tempo.value);          
     }
 
-    function enviarTomada(){
-     
+    function enviarTomada(){    
      tomadaPower(modoT.value);
-      
-
     }
 
     </script>
