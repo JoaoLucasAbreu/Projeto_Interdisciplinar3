@@ -139,7 +139,7 @@ app.get("/lampada/BlinkCount/:contagem", (req, res) => {
 app.get("/lampada/Color/:rgb", (req, res) => {
 	const rgb = req.params.rgb;
 	if (rgb && rgb.length === 6) {
-		enviarComandoMQTT(prefixoLampada + "Color", "#" + rgb + "0000");
+		enviarComandoMQTT(prefixoLampada + "Color","#" + rgb + "0000");
 		res.json(true);
 	} else {
 		res.status(400).json("Cor inválida!");
