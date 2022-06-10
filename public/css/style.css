@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.7)),url('/public/img/wallpapersden.com_76492-5120x2880.jpg') no-repeat center center fixed; 
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('/public/img/by.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -118,6 +118,7 @@ h3 {
     height: 10em;
     padding: 0;
     width: 10em;
+    border-radius: 10px;
   }
   
   *:focus{
@@ -148,43 +149,49 @@ h3 {
     padding-bottom: 30px;
   }
 
-  .buttonn {
-    border-radius: 4px;
-    background-image: linear-gradient(to bottom right, #00feff , #fb4925);
-    border: none;
-    color: #fff;
-    text-align: center;
-    font-size: 24px;
-    padding: 16px;
-    width: 220px;
-    margin-bottom: 20px;
-    transition: all 0.5s;
-    cursor: pointer;
-    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
-  }
   
-  .buttonn{
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .buttonn:after {
-    content: '»';
-    position: absolute;
-    opacity: 0;  
-    top: 14px;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .buttonn:hover{
-    padding-right: 24px;
-    padding-left:8px;
-  }
-  
-  .buttonn:hover:after {
-    opacity: 1;
-    right: 10px;
+
+.btn {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover {
+  background-color: #FFC229;
+  box-shadow: #000000 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.btn:active {
+  transform: scale(1.025);
+}
+
+
+  .card {
+    background: rgba( 0, 0, 0, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
   }

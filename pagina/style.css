@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.7)),url('/img/wallpapersden.com_76492-5120x2880.jpg') no-repeat center center fixed; 
+  background: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.7)),url('/img/29-291388_black-and-yellow-spheres-wallpaper-black-yellow-wallpeper.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -187,4 +187,13 @@ h3 {
   .buttonn:hover:after {
     opacity: 1;
     right: 10px;
+  }
+
+  .card {
+    background: rgba( 0, 0, 0, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
   }

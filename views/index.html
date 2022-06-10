@@ -34,7 +34,7 @@
       <div class="row">
         <!-- Imagem -->
         <div class="col-sm-6 coluna">
-          <div class="card" style="background-color: rgb(70, 70, 70, 0.7);">
+          <div class="card">
             <img class="card-img-top" src="/public/img/Light_bulb_perspective_matte.png" style="display: block;
             margin-left: auto;
             margin-right: auto;
@@ -46,24 +46,26 @@
               <div>
               <div style="display:inline-block">
                 <label for="toggLamp" style="display: block;">Ligado</label>
-                <select id="modoL">
+                <select id="modoL" style="border-radius: 10px; border-color: #FFC229;">
                   <option value="0">Desligado</option>
                   <option value="1">Ligado</option>
                   <option value ="3">Piscar</option>
                 </select>
                 </label>
                 <label for="blinkCBulb" style="display: block;">Blink Count</label>
-                <input type="number" id="contagem" maxlenght="10"></input>
+                <input type="number" id="contagem" maxlenght="10" style="border-radius: 10px; border-color: #FFC229;"></input>
                 <label for="blinkTBulb" style="display: block;" maxlenght="10">Blink Time</label>
-                <input type="number" id="tempo"></input>
-                <label for="colorBulb" style="display: block;">Color</label>
-                <input type="color" id="rgb"></input>
-               
+                <input type="number" id="tempo" style="border-radius: 10px; border-color: #FFC229;"></input>
               </div>
-              <div style="display:inline-block; padding-left: 30px;">
+              <div style="display:inline-block; padding-left: 10px;">
+                <label for="colorBulb" style="display: block;">Color</label>
+                <input type="color" id="rgb" ></input>
+              </div>
+              <div style="    padding-left: 30px;
+              text-align: right;">
                 
                 <div style="text-align: right;">
-                  <button type="button" id="btnDonate" class="buttonn" onclick="enviarLampada()">ENVIAR</button>
+                  <button type="button" id="btnDonate" class="btn" onclick="enviarLampada()">ENVIAR</button>
                 </div>
               </div>
               </div>
@@ -72,7 +74,7 @@
         </div>
         
         <div class="col-sm-6 coluna">
-          <div class="card" style="background-color: rgb(70, 70, 70, 0.7);">
+          <div class="card">
             <img class="card-img-top" src="/public/img/Electric_socket_perspective_matte.png" style="display: block;
             margin-left: auto;
             margin-right: auto;
@@ -83,13 +85,13 @@
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <label for="toggSock" style="display: block;">Ligado</label>
               <label >
-                <select id="modoT">
+                <select id="modoT"  style="border-radius: 10px; border-color: #FFC229;">
                   <option value="0">Desligado</option>
                   <option value="1">Ligado</option>
                 </select>
               </label>
-              <div style="text-align: right;">
-                <button type="button" id="btnDonate" class="buttonn" onclick="enviarTomada()">ENVIAR</button>
+              <div style="text-align: right;     padding-top: 133px;">
+                <button type="button" id="btnDonate" class="btn" onclick="enviarTomada()">ENVIAR</button>
               </div>
             </div>
           </div>
